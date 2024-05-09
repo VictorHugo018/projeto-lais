@@ -1,0 +1,23 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento -->
+<html lang="en"> <!-- Declaração do idioma da página (inglês) -->
+<head>
+    <meta charset="UTF-8"> <!-- Declaração da codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Declaração da viewport para dispositivos móveis -->
+    <title>informação de login</title> <!-- Título da página exibido na aba do navegador -->
+</head>
+<body>
+    <h1>Login de Usuario e Senha</h1> <!-- Título principal da página -->
+    <form action="/resultado" method="post"> <!-- Formulário para enviar o número para verificação -->
+        <label for="usuario">Digite o seu usuario:</label> <!-- Rótulo do campo de entrada -->
+        <input type="text" id='usuario' name="usuario">
+        <label for="senha">Digite sua senha:</label> <!-- Rótulo do campo de entrada -->
+        <input type="text" id="senha" name="senha"> <!-- Campo de entrada para o número -->
+        <button type="submit">Enviar</button> <!-- Botão de envio do formulário -->
+    </form>
+    <div id="resultado">
+        {% if resultado %} <!-- Verifica se há um resultado a ser exibido -->
+            {{ resultado }} <!-- Exibe o resultado da verificação (par ou ímpar) -->
+        {% endif %}
+    </div>
+</body>
+</html>
